@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Umut Şuataman · ML & Computer Vision Engineer",
+    "description": "Computer engineer focused on data science, machine learning, deep learning and computer vision: real-time UAV detection, GPS-free autonomous flight and applied ML."
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "toggleTheme": "Toggle colour theme",
+    "language": "Türkçe",
+    "menu": "Menu",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "badge": "Open to jobs, internships & freelance",
+    "role": "Computer Engineer",
+    "headline": "I teach machines to see.",
+    "focus": "Data Science · Machine Learning · Deep Learning · Computer Vision",
+    "intro": "From real-time UAV detection with YOLOv8 to GPS-free autonomous flight on ROS2, I build vision and ML systems that work outside the notebook. I build full-stack web apps too.",
+    "cta": "Download CV",
+    "ctaWeb": "Web CV",
+    "projects": "See projects"
+  },
+  "about": {
+    "label": "About",
+    "title": "Engineer by degree, vision nerd by choice.",
+    "bio": "I graduated in Computer Engineering from Balıkesir University in 2025. Most of my work sits where data meets the physical world: detecting aircraft in a video stream, estimating a drone's position without GPS, or predicting clinical risk from patient data. I like taking a model from an idea to something that runs in real time.",
+    "focusTitle": "Focus",
+    "statsTitle": "In numbers",
+    "statTeknofest": "TEKNOFEST teams",
+    "statInternships": "internships",
+    "statAuc": "best ROC-AUC",
+    "locationTitle": "Based in",
+    "nowTitle": "Now",
+    "now": "Looking for ML, computer vision or data-science roles.",
+    "webTitle": "Also ships",
+    "web": "Full-stack web apps"
+  },
+  "skills": {
+    "label": "Toolbox",
+    "title": "What I work with"
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Selected work",
+    "details": "Read more",
+    "code": "Code",
+    "stars": "stars",
+    "otherTitle": "More on GitHub",
+    "allRepos": "All repositories"
+  },
+  "web": {
+    "label": "Web",
+    "title": "Also building for the web",
+    "text": "Before vision and ML, I built backends and web apps, and I still do. I use React and Next.js on the front end and Node.js, REST APIs, MySQL and Firebase behind them. This site is built with Next.js, TypeScript and Tailwind.",
+    "examples": "TravelArt backend · Image Processor · Chat Sentiment App"
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Where I've worked",
+    "education": "Education",
+    "certificate": "Certificate",
+    "viewCertificate": "View certificate"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's build something that sees.",
+    "text": "I'm open to full-time roles, internships and freelance projects in ML, computer vision and data science. The fastest way to reach me is email.",
+    "copy": "Copy email",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "built": "Built with Next.js & Tailwind CSS"
+  },
+  "project": {
+    "back": "All projects",
+    "overview": "Overview",
+    "highlights": "What I built",
+    "pipeline": "Pipeline",
+    "results": "Results",
+    "stack": "Stack",
+    "viewCode": "View on GitHub",
+    "next": "Next project"
+  },
+  "notFound": {
+    "title": "404: nothing detected here",
+    "text": "The model ran, but this page isn't in the frame.",
+    "home": "Back to home"
+  }
+}

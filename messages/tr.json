@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Umut Şuataman · ML ve Görüntü İşleme Mühendisi",
+    "description": "Veri bilimi, makine öğrenmesi, derin öğrenme ve görüntü işlemeye odaklanan bilgisayar mühendisi: gerçek zamanlı İHA tespiti, GPS'siz otonom uçuş ve uygulamalı ML."
+  },
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "toggleTheme": "Renk temasını değiştir",
+    "language": "English",
+    "menu": "Menü",
+    "skip": "İçeriğe geç"
+  },
+  "hero": {
+    "badge": "İş, staj ve freelance projelere açığım",
+    "role": "Bilgisayar Mühendisi",
+    "headline": "Makinelere görmeyi öğretiyorum.",
+    "focus": "Veri Bilimi · Makine Öğrenmesi · Derin Öğrenme · Görüntü İşleme",
+    "intro": "YOLOv8 ile gerçek zamanlı İHA tespitinden ROS2 üzerinde GPS'siz otonom uçuşa kadar, notebook'un dışında da çalışan görüntü işleme ve ML sistemleri geliştiriyorum. Full-stack web uygulamaları da yapıyorum.",
+    "cta": "CV indir",
+    "ctaWeb": "Web CV",
+    "projects": "Projeleri gör"
+  },
+  "about": {
+    "label": "Hakkımda",
+    "title": "Diploması mühendislik, tutkusu görüntü işleme.",
+    "bio": "2025'te Balıkesir Üniversitesi Bilgisayar Mühendisliği'nden mezun oldum. Çalışmalarımın çoğu verinin fiziksel dünyayla buluştuğu yerde: video akışında uçak tespit etmek, GPS olmadan bir İHA'nın konumunu tahmin etmek ya da hasta verisinden klinik risk tahmin etmek. Bir modeli fikir aşamasından gerçek zamanlı çalışan bir sisteme dönüştürmeyi seviyorum.",
+    "focusTitle": "Odak",
+    "statsTitle": "Rakamlarla",
+    "statTeknofest": "TEKNOFEST takımı",
+    "statInternships": "staj",
+    "statAuc": "en iyi ROC-AUC",
+    "locationTitle": "Konum",
+    "nowTitle": "Şu an",
+    "now": "ML, görüntü işleme veya veri bilimi pozisyonları arıyorum.",
+    "webTitle": "Ayrıca",
+    "web": "Full-stack web uygulamaları"
+  },
+  "skills": {
+    "label": "Araçlar",
+    "title": "Kullandığım teknolojiler"
+  },
+  "projects": {
+    "label": "Projeler",
+    "title": "Öne çıkan çalışmalar",
+    "details": "Detaylar",
+    "code": "Kod",
+    "stars": "yıldız",
+    "otherTitle": "GitHub'da daha fazlası",
+    "allRepos": "Tüm repolar"
+  },
+  "web": {
+    "label": "Web",
+    "title": "Web tarafında da üretiyorum",
+    "text": "Görüntü işleme ve ML'den önce backend ve web uygulamaları geliştirdim, hâlâ da geliştiriyorum. Ön yüzde React ve Next.js, arka tarafta Node.js, REST API'ler, MySQL ve Firebase kullanıyorum. Bu site de Next.js, TypeScript ve Tailwind ile yapıldı.",
+    "examples": "TravelArt backend · Image Processor · Chat Sentiment App"
+  },
+  "experience": {
+    "label": "Deneyim",
+    "title": "Çalıştığım yerler",
+    "education": "Eğitim",
+    "certificate": "Sertifika",
+    "viewCertificate": "Sertifikayı gör"
+  },
+  "contact": {
+    "label": "İletişim",
+    "title": "Gören bir şey inşa edelim.",
+    "text": "ML, görüntü işleme ve veri bilimi alanlarında tam zamanlı pozisyonlara, stajlara ve freelance projelere açığım. Bana en hızlı e-postayla ulaşabilirsiniz.",
+    "copy": "E-postayı kopyala",
+    "copied": "Kopyalandı!"
+  },
+  "footer": {
+    "built": "Next.js ve Tailwind CSS ile yapıldı"
+  },
+  "project": {
+    "back": "Tüm projeler",
+    "overview": "Genel bakış",
+    "highlights": "Neler yaptım",
+    "pipeline": "Akış",
+    "results": "Sonuçlar",
+    "stack": "Teknolojiler",
+    "viewCode": "GitHub'da gör",
+    "next": "Sonraki proje"
+  },
+  "notFound": {
+    "title": "404: burada bir şey tespit edilmedi",
+    "text": "Model çalıştı ama bu sayfa kadrajda değil.",
+    "home": "Ana sayfaya dön"
+  }
+}
