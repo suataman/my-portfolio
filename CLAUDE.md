@@ -22,6 +22,7 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 | `src/lib/github.ts` | `getRepoStars()` (GitHub API, 1h revalidate, `{}` on failure), `repoUrl()` |
 | `src/lib/theme.ts` | Pre-paint theme script, `toggleTheme`, `applyStoredTheme` |
 | `src/i18n/{routing,request,navigation}.ts` | next-intl setup |
+| `src/app/robots.ts`, `src/app/sitemap.ts` | SEO: robots.txt + sitemap (home + featured projects × locales, hreflang). Proxy matcher skips dotted paths |
 | `src/proxy.ts` | Middleware (Next 16 name — **not** `middleware.ts`) |
 | `messages/{en,tr}.json` | UI strings (namespaces: meta, nav, hero, about, …) |
 | `public/` | `cv/` (2 PDFs: ML, Web), `images/` (profile, avatar, `projects/`), `certificates/` |
@@ -47,12 +48,30 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 ## Deployment
 - Live at **https://umutsuataman.dev** (Vercel project `my-portfolio`, Hobby). Every push to `main` auto-deploys.
 - Domain registered at **Cloudflare Registrar** (auto-renew on). DNS at Cloudflare: `@` and `www` CNAME → Vercel target, proxy **off** (DNS only — orange cloud breaks Vercel SSL).
+- Email anti-spoofing (domain sends no mail): TXT `@` = `v=spf1 -all`, TXT `_dmarc` = `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s`. If email is ever set up on this domain, update both first.
 - `www.umutsuataman.dev` → 308 redirect to apex (set in Vercel → Settings → Domains).
-- `metadataBase` in `[locale]/layout.tsx` = `https://umutsuataman.dev`; change it if the domain ever changes.
+- Domain lives in one constant: `siteUrl` in `src/content/data.ts` (metadataBase, sitemap, robots, JSON-LD). Change only that if the domain changes.
+
+## SEO
+- Layout metadata: canonical `/<locale>`, hreflang en/tr/x-default, OG + twitter card, keywords incl. "Suataman" (no Ş).
+- Project pages set their own canonical/hreflang/OG (child `alternates` replaces layout's, not merged).
+- Home page renders JSON-LD `@graph` (Person + WebSite, `sameAs` = `profile.links`) via native `<script type="application/ld+json">`.
+- Search Console: domain property `sc-domain:umutsuataman.dev` verified (TXT `google-site-verification=…` at Cloudflare — keep it). Sitemap submitted 2026-11-26; indexing requested for `/en` and `/tr`. One sitemap covers both locales.
+- Site linked from GitHub profile + LinkedIn Website field; launch post shared on LinkedIn (2026-11-26).
+
+## Workflow notes
+- `git push origin main` from Claude is blocked by the auto-mode classifier → commit locally, then ask the user to run `! git push origin main`.
+- Dev server check: if you start `npm run dev` yourself, kill the whole node tree afterwards (TaskStop alone left an orphan on :3000 once).
+- User writes Turkish; reply in Turkish.
 
 ## Status / open items
+- **Pending user decisions (ask before acting):**
+  1. Remove `CLAUDE.md` from the repo (add to `.gitignore` + `git rm --cached`)? User originally didn't want it pushed. Until decided, don't commit CLAUDE.md changes.
+  2. Strip `Co-Authored-By: Claude` from history (needs rewrite + force push) and stop adding it to future commits?
 - Only `uav-detection-tracking` has an image; other 3 featured projects have none.
 - No Turkish CV (both PDFs English).
+
+_Last session: 2026-11-26 — fixed script warning, English default, stats card, certificates list, deployed to Vercel, connected umutsuataman.dev, added SPF/DMARC._
 
 ## Session rule
 When structure, conventions or the open items above change, **update this file in the same task** so the next session can start without scanning.
