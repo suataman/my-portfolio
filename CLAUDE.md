@@ -44,11 +44,15 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 - Dark mode: `.dark` class on `<html>`, default dark, persisted in `localStorage.theme`. `@custom-variant dark`.
 - Fonts: Archivo (`--font-sans`), JetBrains Mono (`--font-mono`) via `next/font`.
 
+## Deployment
+- Live at **https://umutsuataman.dev** (Vercel project `my-portfolio`, Hobby). Every push to `main` auto-deploys.
+- Domain registered at **Cloudflare Registrar** (auto-renew on). DNS at Cloudflare: `@` and `www` CNAME → Vercel target, proxy **off** (DNS only — orange cloud breaks Vercel SSL).
+- `www.umutsuataman.dev` → 308 redirect to apex (set in Vercel → Settings → Domains).
+- `metadataBase` in `[locale]/layout.tsx` = `https://umutsuataman.dev`; change it if the domain ever changes.
+
 ## Status / open items
-- `src/app/[locale]/layout.tsx` `metadataBase` is still `http://localhost:3000` → set real domain before deploy.
 - Only `uav-detection-tracking` has an image; other 3 featured projects have none.
 - No Turkish CV (both PDFs English).
-- Not deployed yet.
 
 ## Session rule
 When structure, conventions or the open items above change, **update this file in the same task** so the next session can start without scanning.

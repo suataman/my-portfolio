@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: { default: t("title"), template: `%s · Umut Şuataman` },
     description: t("description"),
-    metadataBase: new URL("http://localhost:3000"),
+    metadataBase: new URL("https://umutsuataman.dev"),
     alternates: { languages: { en: "/en", tr: "/tr" } },
     openGraph: {
       title: t("title"),
