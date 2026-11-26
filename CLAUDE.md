@@ -65,9 +65,9 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 - User writes Turkish; reply in Turkish.
 
 ## Status / open items
-- **Pending user decisions (ask before acting):**
-  1. Remove `CLAUDE.md` from the repo (add to `.gitignore` + `git rm --cached`)? User originally didn't want it pushed. Until decided, don't commit CLAUDE.md changes.
-  2. Strip `Co-Authored-By: Claude` from history (needs rewrite + force push) and stop adding it to future commits?
+- `CLAUDE.md` stays in the repo (user decided 2026-11-26); commit its updates normally.
+- **Pending user decision (ask before acting):**
+  1. Strip `Co-Authored-By: Claude` from history (needs rewrite + force push) and stop adding it to future commits?
 - Only `uav-detection-tracking` has an image; other 3 featured projects have none.
 - No Turkish CV (both PDFs English).
 
