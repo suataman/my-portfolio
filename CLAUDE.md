@@ -66,12 +66,11 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 
 ## Status / open items
 - `CLAUDE.md` stays in the repo (user decided 2026-11-26); commit its updates normally.
-- **Pending user decision (ask before acting):**
-  1. Strip `Co-Authored-By: Claude` from history (needs rewrite + force push) and stop adding it to future commits?
+- `Co-Authored-By: Claude` trailer stays on commits, past and future (user decided 2026-11-26). No history rewrite.
 - Only `uav-detection-tracking` has an image; other 3 featured projects have none.
 - No Turkish CV (both PDFs English).
 
-_Last session: 2026-11-26 — fixed script warning, English default, stats card, certificates list, deployed to Vercel, connected umutsuataman.dev, added SPF/DMARC._
+_Last session: 2026-11-26 — SEO (robots, sitemap, canonical/hreflang, JSON-LD), Search Console verified + sitemap submitted, LinkedIn launch post; settled CLAUDE.md-in-repo and Co-Authored-By decisions._
 
 ## Session rule
 When structure, conventions or the open items above change, **update this file in the same task** so the next session can start without scanning.
