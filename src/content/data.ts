@@ -362,11 +362,28 @@ export const education = {
   period: "2025",
 };
 
-export const certificate = {
-  title: {
-    en: "Data Science & Machine Learning Bootcamp",
-    tr: "Veri Bilimi ve Makine Öğrenmesi Bootcamp",
-  } satisfies L,
-  issuer: "Huawei × Türkiye Yapay Zeka Akademisi",
-  image: "/certificates/huawei-bootcamp.jpg",
+export type Certificate = {
+  /** Stable unique key (kebab-case). */
+  id: string;
+  title: L;
+  issuer: string;
+  /** Free-form date, e.g. "2024" or "Mar 2025". */
+  date?: string;
+  /** Scan/photo in public/certificates/. Width/height = real pixel size. */
+  image?: { src: string; width: number; height: number };
+  /** Online verification link (Coursera, Credly, etc.). */
+  url?: string;
 };
+
+/** Newest first. To add one: put the image in public/certificates/ and append an entry. */
+export const certificates: Certificate[] = [
+  {
+    id: "huawei-ds-ml-bootcamp",
+    title: {
+      en: "Data Science & Machine Learning Bootcamp",
+      tr: "Veri Bilimi ve Makine Öğrenmesi Bootcamp",
+    },
+    issuer: "Huawei × Türkiye Yapay Zeka Akademisi",
+    image: { src: "/certificates/huawei-bootcamp.jpg", width: 1600, height: 1131 },
+  },
+];

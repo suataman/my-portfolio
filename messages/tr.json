@@ -31,7 +31,7 @@
     "statsTitle": "Rakamlarla",
     "statTeknofest": "TEKNOFEST takımı",
     "statInternships": "staj",
-    "statAuc": "en iyi ROC-AUC",
+    "statProjects": "öne çıkan proje",
     "locationTitle": "Konum",
     "nowTitle": "Şu an",
     "now": "ML, görüntü işleme veya veri bilimi pozisyonları arıyorum.",
@@ -61,8 +61,9 @@
     "label": "Deneyim",
     "title": "Çalıştığım yerler",
     "education": "Eğitim",
-    "certificate": "Sertifika",
-    "viewCertificate": "Sertifikayı gör"
+    "certificates": "{count, plural, one {Sertifika} other {Sertifikalar}}",
+    "viewCertificate": "Sertifikayı gör",
+    "verifyCertificate": "Doğrula ↗"
   },
   "contact": {
     "label": "İletişim",

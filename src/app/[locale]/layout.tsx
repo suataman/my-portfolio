@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -61,6 +60,9 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
       className={`${archivo.variable} ${jetbrains.variable} dark antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-dvh flex flex-col">
         <a
           href="#main"
@@ -68,9 +70,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         >
           {t("skip")}
         </a>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
         <NextIntlClientProvider>
           <Providers>
             <Navbar />

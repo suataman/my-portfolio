@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
-import { certificate, education, experience, pick } from "@/content/data";
+import { certificates, education, experience, pick } from "@/content/data";
 import { Section } from "./Section";
 
 export async function Experience() {
@@ -46,27 +46,57 @@ export async function Experience() {
               {pick(education.school, locale)}, {education.period}
             </p>
           </div>
-          <div>
-            <h3 className="border-b border-line pb-3 font-semibold text-fg">{t("certificate")}</h3>
-            <p className="mt-4 text-fg">{pick(certificate.title, locale)}</p>
-            <p className="text-muted">{certificate.issuer}</p>
-            <a
-              href={certificate.image}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 block overflow-hidden rounded-xl border border-line"
-            >
-              <Image
-                src={certificate.image}
-                alt={`${t("certificate")}: ${pick(certificate.title, locale)}`}
-                width={1600}
-                height={1131}
-                sizes="(min-width: 1024px) 22rem, 100vw"
-                className="h-auto w-full"
-              />
-              <span className="sr-only">{t("viewCertificate")}</span>
-            </a>
-          </div>
+          {certificates.length > 0 && (
+            <div>
+              <h3 className="border-b border-line pb-3 font-semibold text-fg">
+                {t("certificates", { count: certificates.length })}
+              </h3>
+              <ul className="mt-4 space-y-4">
+                {certificates.map((c) => {
+                  const title = pick(c.title, locale);
+                  return (
+                    <li key={c.id} className="flex gap-4">
+                      {c.image && (
+                        <a
+                          href={c.image.src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-28 shrink-0 self-start overflow-hidden rounded-lg border border-line transition-colors hover:border-accent"
+                        >
+                          <Image
+                            src={c.image.src}
+                            alt={title}
+                            width={c.image.width}
+                            height={c.image.height}
+                            sizes="7rem"
+                            className="h-auto w-full"
+                          />
+                          <span className="sr-only">{t("viewCertificate")}</span>
+                        </a>
+                      )}
+                      <div className="min-w-0">
+                        <p className="text-fg">{title}</p>
+                        <p className="text-sm text-muted">
+                          {c.issuer}
+                          {c.date && `, ${c.date}`}
+                        </p>
+                        {c.url && (
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 inline-block text-sm text-accent underline-offset-4 hover:underline"
+                          >
+                            {t("verifyCertificate")}
+                          </a>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </Section>

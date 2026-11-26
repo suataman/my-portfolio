@@ -31,7 +31,7 @@
     "statsTitle": "In numbers",
     "statTeknofest": "TEKNOFEST teams",
     "statInternships": "internships",
-    "statAuc": "best ROC-AUC",
+    "statProjects": "featured projects",
     "locationTitle": "Based in",
     "nowTitle": "Now",
     "now": "Looking for ML, computer vision or data-science roles.",
@@ -61,8 +61,9 @@
     "label": "Experience",
     "title": "Where I've worked",
     "education": "Education",
-    "certificate": "Certificate",
-    "viewCertificate": "View certificate"
+    "certificates": "{count, plural, one {Certificate} other {Certificates}}",
+    "viewCertificate": "View certificate",
+    "verifyCertificate": "Verify credential ↗"
   },
   "contact": {
     "label": "Contact",

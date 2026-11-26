@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { MapPin } from "lucide-react";
-import { pick, profile } from "@/content/data";
+import { featuredProjects, pick, profile } from "@/content/data";
 import { Section } from "./Section";
 
 export async function About() {
@@ -11,7 +11,7 @@ export async function About() {
   const stats = [
     { value: "2", label: t("statTeknofest") },
     { value: "2", label: t("statInternships") },
-    { value: "0.90", label: t("statAuc") },
+    { value: String(featuredProjects.length), label: t("statProjects") },
   ];
 
   return (
