@@ -8,6 +8,7 @@ import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { themeInitScript } from "@/lib/theme";
+import { profile, siteUrl } from "@/content/data";
 import "../globals.css";
 
 const archivo = Archivo({
@@ -34,16 +35,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
-    title: { default: t("title"), template: `%s · Umut Şuataman` },
+    title: { default: t("title"), template: `%s · ${profile.name}` },
     description: t("description"),
-    metadataBase: new URL("https://umutsuataman.dev"),
-    alternates: { languages: { en: "/en", tr: "/tr" } },
+    metadataBase: new URL(siteUrl),
+    applicationName: profile.name,
+    authors: [{ name: profile.name, url: siteUrl }],
+    creator: profile.name,
+    keywords: [
+      "Umut Şuataman",
+      "Umut Suataman",
+      "Şuataman",
+      "Suataman",
+      "machine learning",
+      "computer vision",
+      "deep learning",
+      "UAV detection",
+    ],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: "/en", tr: "/tr", "x-default": "/en" },
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
+      url: `/${locale}`,
+      siteName: profile.name,
       images: ["/images/profile.png"],
       locale: locale === "tr" ? "tr_TR" : "en_US",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/images/profile.png"],
     },
   };
 }

@@ -6,6 +6,9 @@ export type L = Record<Locale, string>;
 export const pick = (value: L, locale: string): string =>
   value[locale as Locale] ?? value.en;
 
+/** Production origin, used for metadataBase, sitemap, robots and JSON-LD. */
+export const siteUrl = "https://umutsuataman.dev";
+
 export const profile = {
   name: "Umut Şuataman",
   email: "suatamanumut@gmail.com",

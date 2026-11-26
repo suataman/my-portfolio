@@ -24,7 +24,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const p = featuredProjects.find((x) => x.slug === slug);
   if (!p) return {};
-  return { title: pick(p.title, locale), description: pick(p.summary, locale) };
+  const path = `/projects/${slug}`;
+  return {
+    title: pick(p.title, locale),
+    description: pick(p.summary, locale),
+    alternates: {
+      canonical: `/${locale}${path}`,
+      languages: { en: `/en${path}`, tr: `/tr${path}`, "x-default": `/en${path}` },
+    },
+    openGraph: {
+      title: pick(p.title, locale),
+      description: pick(p.summary, locale),
+      url: `/${locale}${path}`,
+      type: "article",
+      images: [p.image?.src ?? "/images/profile.png"],
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: Props) {
