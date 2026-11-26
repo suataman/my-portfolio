@@ -63,6 +63,7 @@ Bilingual (EN/TR) personal portfolio. **Read this file instead of re-scanning th
 - `git push origin main` from Claude is blocked by the auto-mode classifier → commit locally, then ask the user to run `! git push origin main`.
 - Dev server check: if you start `npm run dev` yourself, kill the whole node tree afterwards (TaskStop alone left an orphan on :3000 once).
 - User writes Turkish; reply in Turkish.
+- Claude in Chrome works with the user's Search Console + LinkedIn sessions. Public posts: draft → user approves text → user (or Claude, on explicit yes) clicks publish. In LinkedIn composer don't press Escape (opens "save draft?" dialog).
 
 ## Status / open items
 - `CLAUDE.md` stays in the repo (user decided 2026-11-26); commit its updates normally.
